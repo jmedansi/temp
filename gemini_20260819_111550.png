@@ -1,0 +1,11 @@
+from PIL import Image
+
+# Charger l'image générée
+img_path = 'watermarked_img_4140412597948973584.jpg'
+output_path = 'bison_polaire_nuit.jfif'
+
+# Ouvrir et sauvegarder au format JFIF (JPEG avec header JFIF)
+image = Image.open(img_path)
+image.save(output_path, 'JPEG', jfif_version=(1, 1), jfif_unit=1, jfif_density=(300, 300), quality=95)
+
+print(f"Image sauvegardée sous {output_path}")
